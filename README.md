@@ -171,22 +171,6 @@ python tools/deployment/export_onnx.py -c configs/rtdetrv2_obb/rtdetrv2_obb_hgne
 
 See `model_zoo/` for manifests and per-class metrics. Full-data fine-tuning results will be updated on completion.
 
-## Citation
-
-If you find this repo useful, please cite the original ADQM paper and the baseline:
-
-```bibtex
-@article{riodetr2025,
-  title={Rethinking Localization Quality in Real-Time Oriented Detection},
-  year={2025}
-}
-@article{lv2024detrs,
-  title={DETRs Beat YOLOs on Real-time Object Detection},
-  author={Lv, Wenyu and others},
-  journal={CVPR},
-  year={2024}
-}
-```
 
 ## Acknowledgements
 
