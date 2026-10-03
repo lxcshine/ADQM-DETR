@@ -1,0 +1,25 @@
+__include__: [rtdetrv2_obb_hgnetv2_m_diorr.yml]
+
+output_dir: ./outputs/rtdetrv2_obb_m_diorr_adqm_ft
+
+epoches: 60
+flat_epoch: 2
+no_aug_epoch: 4
+
+optimizer:
+  # 微调峰值 LR = 原值 1e-4 的 1/4
+  lr: 0.000025
+
+train_dataloader:
+  dataset:
+    # 全量训练集: 5,862 + 5,863 = 11,725 张
+    ann_file:
+      - datasets/DIOR-R/ImageSets/Main/train.txt
+      - datasets/DIOR-R/ImageSets/Main/val.txt
+    transforms:
+      policy:
+        # 压缩增强日程: epoch 2-10 弱增强, 10-16 退火, 16 后无增强
+        epoch: [2, 10, 16]
+  collate_fn:
+    mixup_epochs: [2, 10]
+    stop_epoch: 16

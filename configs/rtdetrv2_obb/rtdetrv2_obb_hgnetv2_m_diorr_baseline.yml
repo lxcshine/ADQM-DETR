@@ -1,0 +1,11 @@
+
+
+__include__: [rtdetrv2_obb_hgnetv2_m_diorr.yml]
+
+RTDETRTransformerv2OBB:
+  adqm:
+    enabled: false
+
+RTv4OBBCriterion:
+  adqm:
+    enabled: false
