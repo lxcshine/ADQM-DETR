@@ -161,17 +161,6 @@ python tools/deployment/export_onnx.py -c configs/rtdetrv2_obb/rtdetrv2_obb_hgne
     -r outputs/rtdetrv2_obb_m_diorr_adqm/best_stg1.pth --check
 ```
 
-## Results (DIOR-R test, 800x800)
-
-| Model | AP50 | AP75 | AP50:95 |
-|---|---|---|---|
-| RT-DETRv2-OBB-M baseline (subset) | — | — | — |
-| + ADQM (subset, 102 ep) | 64.2 | 44.0 | 42.1 |
-| + ADQM (full-data fine-tune, best so far) | 72.1 | 50.5 | — |
-
-See `model_zoo/` for manifests and per-class metrics. Full-data fine-tuning results will be updated on completion.
-
-
 ## Acknowledgements
 
 This implementation is built on [RT-DETR](https://github.com/lyuwenyu/RT-DETR) / [DEIM](https://github.com/Intelligent-Perception-AI/DEIM). Thanks to the original authors for the open-source baseline.
